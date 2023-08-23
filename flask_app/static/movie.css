@@ -1,0 +1,13 @@
+.header {
+    color: white;
+    font-family: monospace;
+    text-align: center;
+    
+    
+}
+
+
+.card {
+   border: none;
+   background-color:  rgba(218, 71, 71, 0.898);
+}
