@@ -59,14 +59,15 @@
         </div>
         <form action='/update/movie' method='post'>
             <div class="text-danger text-center font-monospace mt-3">
-                {% with messages = get_flashed_messages(category_filter=["movie"]) %}     <!-- declare a variable called messages -->
-                        {% if messages %}                            <!-- check if there are any messages -->
-                        {% for message in messages %}            <!-- loop through the messages -->
-                            <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
-                            {% endfor %}
-                            {% endif %}
-                            {% endwith %}
-                </div>
+                {% with messages = get_flashed_messages(category_filter=["movie"]) %}
+                <!-- declare a variable called messages -->
+                {% if messages %} <!-- check if there are any messages -->
+                {% for message in messages %} <!-- loop through the messages -->
+                <p>{{message}}</p> <!-- display each message in a paragraph tag -->
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
             <input type="hidden" name="id" value="{{edit.id}}">
             <div class="font-monospace mt-3">
                 <div class="row">
@@ -87,18 +88,18 @@
                     <div class="col-sm">
                         <div class="form-group">
                             <label for="description"></label>
-                            <textarea type="text" name="description"
-                                value="{{edit.description}}" rows="5" cols="30" class="form-control">{{edit.description}}</textarea>
+                            <textarea type="text" name="description" value="{{edit.description}}" rows="5" cols="30"
+                                class="form-control">{{edit.description}}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="fav_quote"></label>
-                            <textarea type="text" name="fav_quote" 
-                                value="{{edit.fav_quote}}" rows="5" cols="30" class="form-control">{{edit.fav_quote}}</textarea>
+                            <textarea type="text" name="fav_quote" value="{{edit.fav_quote}}" rows="5" cols="30"
+                                class="form-control">{{edit.fav_quote}}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="comments"></label>
-                            <textarea type="text" name="comments"
-                                value="{{edit.comments}}" rows="5" cols="30" class="form-control">{{edit.comments}}</textarea>
+                            <textarea type="text" name="comments" value="{{edit.comments}}" rows="5" cols="30"
+                                class="form-control">{{edit.comments}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -109,7 +110,7 @@
     <footer class="text-center font-monospace fixed-bottom">
         <div class="container p-4"></div>
         <div class="text-center text-dark p-3">
-        © 2023 Copyright: Dum little girl presents Mama's Night
+            © 2023 Copyright: Dum little girl presents Mama's Night
         </div>
 </body>
 

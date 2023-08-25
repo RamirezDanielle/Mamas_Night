@@ -122,5 +122,5 @@ class Movie:
             is_valid = False
             flash("Enter a date!", "movie")
         return is_valid
-        
+
 

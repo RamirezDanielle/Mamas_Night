@@ -45,7 +45,7 @@ def all_movies():
 @app.route('/submit/movie', methods=['POST'])
 def new_movie():
    if 'user_id' not in session:
-        return redirect('/logout')
+      return redirect('/logout')
    if not Movie.validate_movie(request.form):
       return redirect('/enter/movie')
    data = {
@@ -63,14 +63,13 @@ def new_movie():
 
 
 
-
 #update movie watched
 @app.route('/update/movie', methods=['POST'])
 def update_movie():
    if 'user_id' not in session:
-        return redirect('/logout')
-   # if not Movie.validate_movie(request.form):
-   #    return redirect('edit_movie.html')
+      return redirect('/logout')
+   if not Movie.validate_movie(request.form):
+      return redirect(f"/edit/movies/{session['user_id']}")
    data = {
       'id' : request.form['id'],
       'title': request.form['title'],
