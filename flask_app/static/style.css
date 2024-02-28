@@ -7,3 +7,41 @@ body {
     background: black;
 }
 
+.form-container {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#login_form, #reg_form {
+    width: 300px;
+    margin: 0 auto;
+    display: inline-block;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+#reg_form {
+    transform: translateX(100%);
+}
+
+#indicator {
+    width: 200px;
+    text-align: center;
+    margin: 10px auto;
+    transition: margin-left 0.5s ease-in-out;
+    
+}
+
+.register-indicator {
+    transform: translateX(100%);
+}
+
+hr {
+    text-align: center;
+}
+
+.log_reg {
+    text-align: center;
+}
