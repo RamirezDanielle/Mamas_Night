@@ -5,9 +5,91 @@
 
 body {
     background: black;
+    color: whitesmoke;
+    
 }
 
-.form-container {
+.col {
+    flex-basis: 50%;
+    min-width: 400px;
+}
+
+.form-container{
+    width: 300px;
+    height: 620px;
+    position: relative;
+    padding: 20px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: whitesmoke;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+
+.form-btn{
+    display: inline-block;
+    text-align: center;
+}
+
+.form-container form{
+    max-width: 300px;
+    padding: 0 15px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+
+form input {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+form .btn:focus{
+    outline: none;
+}
+
+#login_form{
+    left: -300px;
+}
+
+#reg_form {
+    left: 0;
+}
+
+form a {
+    font-size: 12px;
+}
+
+#indicator {
+    width: 100px;
+    border: none;
+    height: 3px;
+    background: whitesmoke;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s;
+}
+
+
+
+
+
+/* .form-container {
     overflow: hidden;
     width: 100%;
     margin-top: 50px;
@@ -44,4 +126,5 @@ hr {
 
 .log_reg {
     text-align: center;
-}
+    cursor: pointer;
+} */
